@@ -117,8 +117,16 @@
       margin-top: 20px;
     }
 
-    .gallery img {
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
       width: 250px;
+    }
+
+    .gallery-item img {
+      width: 100%;
       height: 180px;
       object-fit: cover;
       border-radius: 10px;
@@ -126,9 +134,15 @@
       box-shadow: 0 4px 10px rgba(255,255,255,0.1);
     }
 
-    .gallery img:hover {
+    .gallery-item img:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 16px rgba(241,178,123,0.3);
+    }
+
+    .gallery-item p {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #f1b27b;
     }
 
     .testimonial-container {
@@ -174,7 +188,6 @@
       margin: 0;
     }
 
-
     #subscribe {
       background-color: #111;
       padding: 40px 20px;
@@ -212,7 +225,6 @@
       background-color: #e0a958;
     }
 
-    
     #submitted-checkbox {
       display: none;
     }
@@ -274,15 +286,13 @@
       font-size: 14px;
     }
 
-    
     @media (max-width: 1024px) {
       .intro, .about-container, .story-container {
         gap: 30px;
         padding: 40px 20px;
       }
-      .gallery img {
+      .gallery-item {
         width: 200px;
-        height: 150px;
       }
       .testimonial {
         width: 280px;
@@ -315,9 +325,8 @@
         width: 100px;
         height: 100px;
       }
-      .gallery img {
+      .gallery-item {
         width: 45%;
-        height: auto;
       }
       #subscribe form {
         flex-direction: column;
@@ -337,7 +346,7 @@
       .intro-text p, .about-text p, .story-text p {
         font-size: 16px;
       }
-      .gallery img {
+      .gallery-item {
         width: 90%;
       }
       .testimonial {
@@ -358,7 +367,6 @@
     </nav>
   </header>
 
-  
   <section id="intro" class="intro">
     <div class="intro-text">
       <h2>Welcome to Lounge Cafe</h2>
@@ -372,7 +380,6 @@
     </div>
   </section>
 
-  
   <section id="about" class="about">
     <div class="about-container">
       <div class="about-image">
@@ -387,7 +394,6 @@
     </div>
   </section>
 
-  
   <section id="story" class="story">
     <div class="story-container">
       <div class="story-text">
@@ -402,23 +408,53 @@
     </div>
   </section>
 
+  <!-- Menu Gallery -->
   <section id="menu" class="menu">
     <h2>Our Menu Gallery</h2>
     <div class="gallery">
-      <img src="OIP.jpeg" alt="Coffee">
-      <img src="sandw.jpeg" alt="Sandwich">
-      <img src="cake.jpeg" alt="Cake">
-      <img src="pasta.jpeg" alt="Pasta">
-      <img src="juice.jpeg" alt="Juice">
-      <img src="ice.jpeg" alt="Ice Cream"> 
-      <img src="pizza.jpeg" alt="Pizza">
-      <img src="french fries.jpeg" alt="French Fries">
-      <img src="mocktails.jpeg" alt="Mocktails">
-      <img src="salads.jpeg" alt="Salads">
+      <div class="gallery-item">
+        <img src="OIP.jpeg" alt="Coffee">
+        <p>Coffee</p>
+      </div>
+      <div class="gallery-item">
+        <img src="sandw.jpeg" alt="Sandwich">
+        <p>Sandwich</p>
+      </div>
+      <div class="gallery-item">
+        <img src="cake.jpeg" alt="Cake">
+        <p>Cake</p>
+      </div>
+      <div class="gallery-item">
+        <img src="pasta.jpeg" alt="Pasta">
+        <p>Pasta</p>
+      </div>
+      <div class="gallery-item">
+        <img src="juice.jpeg" alt="Juice">
+        <p>Juice</p>
+      </div>
+      <div class="gallery-item">
+        <img src="ice.jpeg" alt="Ice Cream">
+        <p>Ice Cream</p>
+      </div>
+      <div class="gallery-item">
+        <img src="pizza.jpeg" alt="Pizza">
+        <p>Pizza</p>
+      </div>
+      <div class="gallery-item">
+        <img src="french fries.jpeg" alt="French Fries">
+        <p>French Fries</p>
+      </div>
+      <div class="gallery-item">
+        <img src="mocktails.jpeg" alt="Mocktails">
+        <p>Mocktails</p>
+      </div>
+      <div class="gallery-item">
+        <img src="salads.jpeg" alt="Salads">
+        <p>Salads</p>
+      </div>
     </div>
   </section>
 
-  
   <section id="testimonials" class="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-container">
@@ -441,7 +477,7 @@
   </section>
 
   <section id="subscribe">
-    <h2>Subscribe to Our Lounge cafe</h2>
+    <h2>Subscribe to Our Newsletter</h2>
     <p style="color:#ccc;">Get updates from Lounge Cafe!</p>
     <input type="checkbox" id="submitted-checkbox">
     <form>
@@ -451,7 +487,6 @@
     <p class="thankyou">Submitted! Thank you for subscribing.</p>
   </section>
 
-  
   <footer>
     <div class="footer-container">
       <div class="footer-left">
@@ -482,4 +517,3 @@
   </footer>
 </body>
 </html>
-
